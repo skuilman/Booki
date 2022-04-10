@@ -5,149 +5,222 @@
 	<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
 	<title>Booki - Marseille, France</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Booki website">
+	<meta name="keywords" content="HTML, CSS">
+	<meta name="author" content="Sjoerd backed by Tyler">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 	
 <body>
-	
+
+<div id="content">
 
 <header>
-<nav>
 	<div>
 	<img src="images/Booki-logo.png" id="logo" alt="Booki logo" />
-	<h2>Find a place for your dream vacation</h2>
-	<p>Downtown or in nature</p>
+	
+	<div id="navigation">
+		<span><a href="#main">Accomodations</a></span>
+		<span><a href="#fond">Activities</a></span>
+	</div>
+	
+	<div id="headertext">
+		<h2>Find a place for your dream vacation</h2>
+		<p>Downtown or in nature</p>
+	</div>
 	
 	<div class="search-container">
 	<form action="#">
 		<span class="search"><span class="fas fa-map-marker-alt"></span></span>
 		<input type="text" placeholder="Marseille, France" name="Search">
-		<button type="submit">Search</button>
+		<button type="submit" id="search">Search</button>
+		<button type="submit" id="magnifier"><i class="fas fa-search"></i></button>
+		
     </form>
 	</div>
-	
-	<div id="filter">
-		<span>Filters</span>
-		<span class="filter-item"><span class="fas fa-money-bill-wave fa-fw bg"></span>Low cost</span>
-		<span class="filter-item"><span class="fas fa-child fa-fw bg"></span>Family-friendly</span>
-		<span class="filter-item"><span class="fas fa-heart fa-fw bg"></span>Romantic</span>
-		<span class="filter-item"><span class="fas fa-dog fa-fw bg"></span>Pets allowed</span>
-	</div>
-	<div>
-		<p style="margin-top: 40px;">More then 500 accomodations are available in this city</p>
-	</div>
-	</div>
-	<div id="navigation">
-		<div><a href="#main">Accomodations</a></div>
-		<div><a href="#fond">Activities</a></div>
-	</div>
-</nav>
-</header>
-	
 
+	<div id="filter">
+		<h2>Filters</h2>
+		<div><span class="filter-item"><span class="fas fa-money-bill-wave fa-fw bg"></span>Low cost</span></div>
+		<div><span class="filter-item"><span class="fas fa-child fa-fw bg"></span>Family-friendly</span></div>
+		<div><span class="filter-item"><span class="fas fa-heart fa-fw bg"></span>Romantic</span></div>
+		<div><span class="filter-item"><span class="fas fa-dog fa-fw bg"></span>Pets allowed</span></div>
+	</div>
 	
+	<div id="info">
+		<p><span class="info">i</span></p> <div>More then 500 accomodations are available in this city</div>
+	</div>
 	
-<div id="grid">
+	</div>
+</header>
+
+<div id="wrapper">
 
 <section id="main">
 	<h2>Accomodations in Marseille</h2>
-		<div class="flex-main">
-			<div>
+		<div class="flex">
+			<div class="flex-item" onclick="location.href='#';" style="cursor: pointer;">
 				<img src="images/accom/auberge.jpg" alt="Auberge la Cannebière">
-				<h3>Auberge la Cannebière</h3>
-				<p>Night starting at 25€<p>
-				<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star grey"></span>
+				<div class="flex-item-content">
+					<h3>Auberge la Cannebière</h3>
+					<p>Night starting at 25€<p>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star grey"></span>
+					<a href="#" style="display: block; height: 100%; width: 100%; text-decoration: none;"></a>
+				</div>
 			</div>
-			<div>
+			<div class="flex-item" onclick="location.href='#';" style="cursor: pointer;">
 				<img src="images/accom/du-port.jpg" alt="Hôtel du port">
-				<h3>Hôtel du port</h3>
-				<p>Night starting at 52€<p>
-				<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+				<div class="flex-item-content">
+					<h3>Hôtel du port</h3>
+					<p>Night starting at 52€<p>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+				</div>
 			</div>
-			<div>
+			<div class="flex-item" onclick="location.href='#';" style="cursor: pointer;">
 				<img src="images/accom/mouettes.jpg"  alt="Les mouettes Hotel">
-				<h3>Les mouettes Hotel</h3>
-				<p>Night starting at 76€<p>
-				<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star grey"></span>
+				<div class="flex-item-content">
+					<h3>Les mouettes Hotel</h3>
+					<p>Night starting at 76€<p>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star grey"></span>
+				</div>
 			</div>
-			<div>
+			<div class="flex-item" onclick="location.href='#';" style="cursor: pointer;">
 				<img src="images/accom/mer.jpg"  alt="Hôtel de la mer">
-				<h3>Hôtel de la mer</h3>
-				<p>Night starting at 46€<p>
-				<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star grey"></span><span class="fa fa-star grey"></span>
+				<div class="flex-item-content">
+					<h3>Hôtel de la mer</h3>
+					<p>Night starting at 46€<p>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star grey"></span>
+					<span class="fa fa-star grey"></span>
+				</div>
 			</div>
-			<div>
+			<div class="flex-item" onclick="location.href='#';" style="cursor: pointer;">
 				<img src="images/accom/panier.jpg"  alt="Auberge Le Panier">
-				<h3>Auberge Le Panier</h3>
-				<p>Night starting at 23€<p>
-				<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star grey"></span>
+				<div class="flex-item-content">
+					<h3>Auberge Le Panier</h3>
+					<p>Night starting at 23€<p>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star grey"></span>
+				</div>
 			</div>
-			<div>
+			<div class="flex-item" onclick="location.href='#';" style="cursor: pointer;">
 				<img src="images/accom/amina.jpg"  alt="Hôtel chez Amina">
-				<h3>Hôtel chez Amina</h3>
-				<p>Night starting at 96€<p>
-				<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+				<div class="flex-item-content">
+					<h3>Hôtel chez Tyler</h3>
+					<p>Night starting at 96€<p>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+				</div>
 			</div>
 		</div>
-	<p style="margin-top: 20px; font-weight: bold;"><a href="#">Show more</a></p>
+	<div id="youleftme"><p><a href="#">Show more</a></p></div>
 </section>
 
-<section id="aside">
+<section id="side">
 	<h2>Most popular</h2>
-		<div id="aside-container">
-			<div class="aside-thumb"><img src="images/pop/morning-sun.jpg" alt="Les mouettes Hotel"></div>
-			<div class="aside-content">
-				<h3>Morning Sun Hotel</h3>
-				<p>Night starting at 128€<p>
-				<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+		<div id="chart"><i class="fas fa-chart-line"></i></div>
+		<div>
+			<div class="flex-item" onclick="location.href='#';" style="cursor: pointer;">
+				<img src="images/pop/morning-sun.jpg" alt="Les mouettes Hotel">
+				<div class="flex-item-content">
+					<h3>Morning Sun Hotel</h3>
+					<p>Night starting at 128€<p>
+					<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+				</div>
 			</div>
-		</div>
-		<div id="aside-container">
-			<div class="aside-thumb"><img src="images/pop/coeur-de-leau.jpg" alt="Les mouettes Hotel"></div>
-			<div class="aside-content">
-				<h3>Au coeur de l'eau Bed and Breakfast</h3>
-				<p>Night starting at 71€<p>
-				<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star grey"></span>
+			<div class="flex-item" onclick="location.href='#';" style="cursor: pointer;">
+				<img src="images/pop/coeur-de-leau.jpg" alt="Les mouettes Hotel">
+				<div class="flex-item-content">
+					<h3>Au coeur de l'eau Bed and Breakfast</h3>
+					<p>Night starting at 71€<p>
+					<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star grey"></span>
+				</div>
 			</div>
-		</div>
-		<div id="aside-container">
-			<div class="aside-thumb"><img src="images/pop/bleu-et-blanc.jpg" alt="Les mouettes Hotel"></div>
-			<div class="aside-content">
-				<h3>Tout blue et Blanc Hotel</h3>
-				<p>Night starting at 68€<p>
-				<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star grey"></span>
+			<div class="flex-item" onclick="location.href='#';" style="cursor: pointer;">
+				<img src="images/pop/bleu-et-blanc.jpg" alt="Les mouettes Hotel">
+				<div class="flex-item-content">
+					<h3>Tout blue et Blanc Hotel</h3>
+					<p>Night starting at 68€<p>
+					<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star grey"></span>
+				</div>	
 			</div>
 		</div>
 </section>
+
+</div>
 
 <section id="fond">
 	<h2>Activities in Marseille</h2>
-	<div class="grid-fond">
-			<div class="a">
-				<img src="images/activ/port.jpg" alt="Old Port">
-				<h3>Old Port</h3>
+		<div>
+			<div class="autoh">
+				<div class="flex-item long" onclick="location.href='#';" style="cursor: pointer;">
+					<img src="images/activ/port.jpg" class="long1" alt="Old Port">
+					<div class="flex-item-content">
+						<h3>Old Port</h3>
+					</div>
+				</div>
 			</div>
-			<div class="b">
-				<img src="images/activ/fort.jpg" alt="Promegues Fort">
-				<h3>Promegues Fort</h3>
+			<div class="autoh">
+				<div class="flex-item" onclick="location.href='#';" style="cursor: pointer;">
+					<img src="images/activ/fort.jpg" class="short half1"  alt="Promegues Fort">
+					<div class="flex-item-content">
+						<h3>Promègues Fort</h3>
+					</div>
+				</div>
+				<div class="flex-item" onclick="location.href='#';" style="cursor: pointer;">
+					<img src="images/activ/frioul.jpg" class="short half2" alt="Frioul Island">
+					<div class="flex-item-content">
+						<h3>Frioul Island</h3>
+					</div>
+				</div>
 			</div>
-			<div class="c">
-				<img src="images/activ/frioul.jpg" alt="Frioul Island">
-				<h3>Frioul Island</h3>
+			<div class="autoh">
+				<div class="flex-item long" onclick="location.href='#';" style="cursor: pointer;">
+					<img src="images/activ/calanques.jpg" class="long2" alt="Calanques National Park">
+					<div class="flex-item-content">
+						<h3>Calanques National Park</h3>
+					</div>
+				</div>
 			</div>
-			<div class="d">
-				<img src="images/activ/calanques.jpg" alt="Calanques National Park">
-				<h3>Calanques National Park</h3>
+			<div class="autoh flextab">
+				<div class="flex-item" onclick="location.href='#';" style="cursor: pointer;">
+					<img src="images/activ/notre.jpg" class="short half3"  alt="Notre Dame de la Garde">
+					<div class="flex-item-content">
+						<h3>Notre Dame de la Garde</h3>
+					</div>
+				</div>
+				<div class="flex-item" onclick="location.href='#';" style="cursor: pointer;">
+					<img src="images/activ/longchamp.jpg" class="short half4"  alt="Longchamp Park">
+					<div class="flex-item-content">
+						<h3>Longchamp Park</h3>
+					</div>
+				</div>
 			</div>
-			<div class="e">
-				<img src="images/activ/notre.jpg" alt="Notre Dame de la Garde">
-				<h3>Notre Dame de la Garde</h3>
-			</div>
-			<div class="f">
-				<img src="images/activ/longchamp.jpg" alt="Longchamp Park">
-				<h3>Longchamp Park</h3>
-			</div>
-	</div>
+		</div>
 </section>
+
+</div>
 
 <footer>
 	<ul>
@@ -167,9 +240,7 @@
 		<li><a href="#">Contact Us</a></li>
 	</ul>
 </footer>
-	 
-</div>
-	 
+
 </body>
 	 
 </html>
